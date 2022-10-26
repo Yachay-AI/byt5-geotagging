@@ -35,3 +35,5 @@ Example of using the trained model is in [prediction.ipynb](./prediction.ipynb)
 ### Challenge 1 - 100 regions
 
 The first suggested methodology on training the model is to look into the dataset of 100 regions around the world, each region represented by 5.000 tweets. The dataset attached provides an annotated corpus of 500k texts, as well as the respective geocoordinates.
+
+The data set is [here](https://drive.google.com/file/d/1J5ducw8O628wyXD7qdcvop2pyNbq26tO/view?usp=sharing)
