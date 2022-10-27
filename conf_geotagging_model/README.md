@@ -12,7 +12,7 @@ This repository is an open call for all Machine Learning developers and research
 ## Geotagging Model How-Tos 
 
 ### Training 💪
-To train your own model, follow the instructions in `training.ipynb` or run it with `train.py` with the command in the terminal
+To train your own model, follow the instructions in `training.ipynb` or run it with `train.py` in the terminal:
 ```bash
 python train.py --data_dir <data_path> --save_prefix <model_path> --arch char_lstm --split_uids
 --batch_size 128 --loss l1 --optimizer adamw --scheduler constant --lr 5e-4 --num_epoch 10 
