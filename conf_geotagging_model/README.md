@@ -27,7 +27,7 @@ To upload a custom dataset, you will need to implement a Dataloader in [data_loa
 To use confidence estimation, set the `conf_estim` and `confidence_validation_criterion` arguments to True. You can set the array to `model_save_band` to show the top predictions by `confidence_bands` (as a percentage from 0 to 100).
 Use `model_save_band` to save the model by the best metric value for the selected band.
 
-## Prediction 
+### Prediction 
 An example of using the trained model is in [prediction.ipynb](./prediction.ipynb)
 
 ## Existing Challenges/Suggested Data Sets
