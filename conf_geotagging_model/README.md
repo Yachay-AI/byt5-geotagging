@@ -40,4 +40,15 @@ The data set is [here](https://drive.google.com/file/d/1J5ducw8O628wyXD7qdcvop2p
 
 ![This is an image](https://media.tenor.com/lOPTx_JZJ3gAAAAC/the-office-steve-carell.gif)
 
+## Resources
+### Contact 📩
+
+If you would like to contact us with any questions, concerns, or feedback, help@yachay.ai is our email.
+
+You also can check out our site, [yachay.ai](https://www.yachay.ai/), or any of our socials below.
+
+### Social Media 📱
+
+
+<a href="https://discord.gg/msWFtcfmwe"><img src="https://cdn-icons-png.flaticon.com/512/3670/3670157.png" width=5% height=5%></img></a>     <a href="https://twitter.com/YachayAi"><img src="https://cdn-icons-png.flaticon.com/128/3670/3670151.png" width=5% height=5%></img></a>     <a href="https://www.reddit.com/user/yachay_ai"><img src="https://cdn-icons-png.flaticon.com/512/3670/3670226.png" width=5% height=5%></img></a>
 
