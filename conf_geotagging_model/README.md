@@ -20,6 +20,14 @@ python train.py --data_dir <data_path> --save_prefix <model_path> --arch char_ls
 ```
 
 All arguments can be seen in [aux_files/args_parser.py](./aux_files/args_parser.py)
+
+#### Dependencies:
+- pytorch == 1.7.1
+- numpy == 1.19.2
+- scikit-learn == 0.22.2
+- tqdm == 4.62.3
+- pandas == 1.0.3
+
 ### Custom Data 📚
 To upload a custom dataset, you will need to implement a Dataloader in [data_loading.py](./data_loading.py). This Dataloader must return a `list of texts, a list of coordinates [longitude, latitude]`. Then, add the result to the `get_dataset` method in [aux_files/args_parser.py](./aux_files/args_parser.py), and you'll be able to select it with the `dataset_name` argument.
 
