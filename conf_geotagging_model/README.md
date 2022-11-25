@@ -31,6 +31,8 @@ All arguments can be seen in [aux_files/args_parser.py](./aux_files/args_parser.
 ### Custom Data 📚
 To upload a custom dataset, you will need to implement a Dataloader in [data_loading.py](./data_loading.py). This Dataloader must return a `list of texts, a list of coordinates [longitude, latitude]`. Then, add the result to the `get_dataset` method in [aux_files/args_parser.py](./aux_files/args_parser.py), and you'll be able to select it with the `dataset_name` argument.
 
+For relevant data sets, please check the Existing Challenges section
+
 ### Confidence 🔥
 To use confidence estimation, set the `conf_estim` and `confidence_validation_criterion` arguments to True. You can set the array to `model_save_band` to show the top predictions by `confidence_bands` (as a percentage from 0 to 100).
 Use `model_save_band` to save the model by the best metric value for the selected band.
