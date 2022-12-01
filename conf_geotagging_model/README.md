@@ -47,8 +47,15 @@ The first suggested methodology on training the model is to look into the datase
 
 The data set is [here](https://drive.google.com/file/d/1J5ducw8O628wyXD7qdcvop2pyNbq26tO/view?usp=sharing)
 
-
 ![This is an image](https://media.tenor.com/lOPTx_JZJ3gAAAAC/the-office-steve-carell.gif)
+
+### Challenge 2 - 12 months 🌎
+
+Challenge 2 sets the goal to identify the correlation between the time/date of post, the content and the location. Time zones difference, as well as seasonality of the events, should be analyzed and used to predict the location. For example: snow is more likely to appear in the Northern Hemisphere, especially if in December. Rock concerts are more likely to happen in the evening and in bigger cities, so the time of the post about a concert should be used to identify the time zone of the author and narrow down the list of potention locations.
+
+The data set provided is a .json of >600.000 texts collected over the span of 12 months, covering 15 different time zones and 6 countries. (Cuba, Iran, Russia, North Korea, Syria, Venezuela). 
+
+The data set is [here](https://drive.google.com/drive/folders/1P2QUGFBKaqdpZ4xAHmJMe2I57I94MJyO?usp=sharing)
 
 ## Resources
 ### Contact 📩
