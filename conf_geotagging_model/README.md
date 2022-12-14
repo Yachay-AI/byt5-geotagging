@@ -41,21 +41,32 @@ Use `model_save_band` to save the model by the best metric value for the selecte
 An example of using the trained model is in [prediction.ipynb](./prediction.ipynb)
 
 ## Existing Challenges/Suggested Data Sets
-### Challenge 1 - 100 regions 🌎
+### Challenge 1 - 123 regions 🌎
 
-The first suggested methodology on training the model is to look into the dataset of 100 regions around the world, where each region is represented by 5,000 tweets. The dataset attached provides an annotated corpus of 500k texts, as well as the respective geocoordinates.
+The first suggested methodology (Challenge 1) on training the model is to look into the dataset of top most populated regions around the world.
 
-The data set is [here](https://drive.google.com/file/d/1J5ducw8O628wyXD7qdcvop2pyNbq26tO/view?usp=sharing)
+#### The dataset provided is an:
+- annotated corpus of 500k texts, as well as the respective geocoordinates
+- 123 regions covered
+- 5000 tweets per location
+
+**The data set is [here](https://drive.google.com/file/d/1J5ducw8O628wyXD7qdcvop2pyNbq26tO/view?usp=sharing)**
 
 ![This is an image](https://media.tenor.com/lOPTx_JZJ3gAAAAC/the-office-steve-carell.gif)
 
 ### Challenge 2 - 12 months 🌎
 
-Challenge 2 sets the goal to identify the correlation between the time/date of post, the content, and the location. Time zones difference, as well as seasonality of the events, should be analyzed and used to predict the location. For example: snow is more likely to appear in the Northern Hemisphere, especially if in December. Rock concerts are more likely to happen in the evening and in bigger cities, so the time of the post about a concert should be used to identify the time zone of the author and narrow down the list of potention locations.
+Challenge 2 sets the goal to identify the correlation between the time/date of post, the content, and the location. 
 
-The data set provided is a .json of >600.000 texts collected over the span of 12 months, covering 15 different time zones and 6 countries. (Cuba, Iran, Russia, North Korea, Syria, Venezuela). 
+Time zones difference, as well as seasonality of the events, should be analyzed and used to predict the location. For example: snow is more likely to appear in the Northern Hemisphere, especially if in December. Rock concerts are more likely to happen in the evening and in bigger cities, so the time of the post about a concert should be used to identify the time zone of the author and narrow down the list of potential locations.
 
-The data set is [here](https://drive.google.com/drive/folders/1P2QUGFBKaqdpZ4xAHmJMe2I57I94MJyO?usp=sharing)
+#### The data set provided is a:
+- .json of >600.000 texts 
+- collected over the span of 12 months
+- covering 15 different time zones 
+- 6 countries. (Cuba, Iran, Russia, North Korea, Syria, Venezuela).
+
+**The data set is [here](https://drive.google.com/drive/folders/1P2QUGFBKaqdpZ4xAHmJMe2I57I94MJyO?usp=sharing)**
 
 ## Resources
 ### Contact 📩
