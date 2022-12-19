@@ -68,12 +68,17 @@ Time zone differences, as well as seasonality of the events, should be analyzed 
 
 **The data set is [here](https://drive.google.com/drive/folders/1P2QUGFBKaqdpZ4xAHmJMe2I57I94MJyO?usp=sharing)**
 
+## Stargazers 
+[![Stargazers repo roster for @1712n/yachay-public](https://reporoster.com/stars/1712n/yachay-public)](https://github.com/1712n/yachay-public/stargazers)
+
+
 ## Resources
 ### Contact 📩
 
 If you would like to contact us with any questions, concerns, or feedback, help@yachay.ai is our email.
 
 You also can check out our site, [yachay.ai](https://www.yachay.ai/), or any of our socials below.
+
 
 ### Social Media 📱
 
