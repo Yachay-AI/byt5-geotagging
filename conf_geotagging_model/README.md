@@ -50,7 +50,7 @@ The first suggested methodology (Challenge 1) on training the model is to look i
 - covers 123 regions
 - includes 5000 tweets per location
 
-**The data set is [here](https://drive.google.com/file/d/1J5ducw8O628wyXD7qdcvop2pyNbq26tO/view?usp=sharing)**
+**The data set is [here](https://drive.google.com/file/d/1thkE-hgT3sDtZqILZH17Hyayy0hkk_jh/view?usp=share_link)**
 
 ![This is an image](https://media.tenor.com/lOPTx_JZJ3gAAAAC/the-office-steve-carell.gif)
 
