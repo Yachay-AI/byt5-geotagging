@@ -40,6 +40,11 @@ Use `model_save_band` to save the model by the best metric value for the selecte
 ### Prediction 🔮
 An example of using the trained model is in [prediction.ipynb](./prediction.ipynb)
 
+### Current Scores
+Yachay current models achieved the following results:
+- Median Average Error (Haversine Distance) of 4.97km
+- Mean Average Error (Haversine Distance) of 541.92km 
+
 ## Existing Challenges/Suggested Data Sets
 ### Challenge 1 - 123 regions 🌎
 
