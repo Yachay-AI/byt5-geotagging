@@ -1,6 +1,21 @@
 # Yachay: Shared Knowledge
 
-[![Cover](https://user-images.githubusercontent.com/29067628/197814413-90cc6585-4580-48a8-88e4-ee2413198a09.png)](https://www.yachay.ai/)
+[![Cover](https://user-images.githubusercontent.com/29067628/197814413-90cc6585-4580-48a8-88e4-ee2413198a09.png)](https://www.yachay.ai/) 
+
+
+<p align="center">
+<a href="https://twitter.com/YachayAi"><img src="https://img.shields.io/badge/Follow%20us-%40YachayAi-blue?style=plastic&logo=twitter"></img></a>
+<a href="https://www.reddit.com/user/yachay_ai"><img src="https://img.shields.io/badge/Follow%20us-u%2Fyachay__ai-orange?style=plastic&logo=reddit"></img></a>
+</p> 
+
+
+<p align="center">
+<a href="https://github.com/1712n/yachay-public/stargazers"><img src="https://badgen.net/github/stars/1712n/yachay-public"></img></a>
+<a href="https://github.com/1712n/yachay-public/forks"><img src="https://badgen.net/github/forks/1712n/yachay-public"></img></a>
+<a href="https://github.com/1712n/yachay-public/contributors"><img src="https://badgen.net/github/contributors/1712n/yachay-public"></img></a>
+<a href="https://github.com/1712n/yachay-public/issues"><img src="https://badgen.net/github/issues/1712n/yachay-public"></img></a>
+<a href="https://github.com/1712n/yachay-public/blob/master/LICENSE.md"><img src="https://badgen.net/github/license/1712n/yachay-public"></img></a>
+</p> 
 
 
 Yachay is an open-source platform for Machine Learning. It has collected decades worth of useful natural language data from traditional media (i.e. New York Times articles), social media (i.e. Twitter & Reddit), messenger channels, tech blogs, GitHub profiles and issues, the dark web, and legal proceedings, as well as the decisions and publications of government regulators and legislators all across the world.
