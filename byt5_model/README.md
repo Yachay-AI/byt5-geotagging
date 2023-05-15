@@ -33,7 +33,7 @@ For ByT5 model training, use the following script:
 python train_model.py --train_input_file <training_file> --test_input_file <test_file> --do_train true --do_test true --load_clustering .
 ```
 
-You can specify additional arguments described in `train_model.py`.
+The full list of parameters can be found in `train_model.py`.
 
 #### Dependencies:
 - transformers==4.29.1
@@ -42,15 +42,17 @@ You can specify additional arguments described in `train_model.py`.
 - pytorch==1.7.1
 
 ### Custom Data 📚
-You can prepare input train and test files with the following columns: `text`, `lat`, `lon`.
+Custom training and testing data sets should be formatted as CSVs with the following columns: `text`, `lat`, `lon`.
 
-For relevant data sets, please check the Existing Challenges section.
+For relevant data sets suggested by the Yachay team, please check the Existing Challenges section.
 
 ### Confidence 🔥
-For confidence estimation, you can see sample in `inference.py`. Confidence is outputted to `relevance` field, is ranged from 0.0 to 1.0, and higher values correspond to higher prediction confidence.
+For confidence estimation, see `inference.py`. 
+- Check the `Relevance` field, ranged from 0.0 to 1.0 
+- Higher relevance values correspond to a higher prediction confidence
 
 ### Prediction 🔮
-An example of using a trained model is in `inference.py`.
+An example of using the trained model is in `inference.py`.
 
 ### Current Scores
 Current models have the following validation metrics:
