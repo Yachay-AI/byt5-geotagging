@@ -13,59 +13,76 @@
 <a href="https://github.com/Yachay-AI/byt5-geotagging/blob/master/LICENSE.md"><img src="https://badgen.net/github/license/Yachay-AI/byt5-geotagging"></img></a>
 </p> 
 
-## Byt5 Geotagging Model
-### Current Scores
-Current byt5 based geotagging model has the following validation metrics:
-- Median Average Error (Haversine Distance) of 19.22km
-- Mean Average Error (Haversine Distance) of 434.16km 
+# ByT5 Geotagging Model
 
-### Training 
-For ByT5 model training, use the following script:
+This repository is designed to support developers in building and training their own geotagging models. The ByT5 model architecture provided here allows for customization and training. Additionally, we suggest two curated datasets that are well-suited for training in different geolocation detection scenarios.
 
-```bash
-python train_model.py --train_input_file <training_file> --test_input_file <test_file> --do_train true --do_test true --load_clustering .
+## Output Example
+
+```json
+
+{
+   "text":"These kittens need homes and are located in the Omaha area! They have their shots and are spayed/neutered. They need to be gone by JAN 1st! Please Retweet to help spread the word!",
+   "geotagging":{
+      "lat":41.257160,
+      "lon":-95.995102,
+      "confidence":0.9950085878372192,
+      "version":"3.0",
+      "source":"nominatim"
+   }
+}
 ```
 
-The full list of parameters can be found in `train_model.py`.
+```geojson
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 1,
+      "properties": {
+        "ID": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-96.296363, 41.112793],
+            [-96.296363, 41.345177],
+            [-95.786877, 41.345177],
+            [-95.786877, 41.112793],
+            [-96.296363, 41.112793]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 2,
+      "properties": {
+        "ID": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-95.995102, 41.257160]
+      }
+    }
+  ]
+}
 
-#### Dependencies
 ```
-transformers==4.29.1
-tqdm==4.63.2
-pandas==1.4.4
-pytorch==1.7.1
-```
 
-### Custom Data 
-Custom training and testing data sets should be formatted as CSVs with the following columns: `text`, `lat`, `lon`.
+## Datasets
+Our team has curated two comprehensive datasets for two distinct training approaches. These datasets are intended for use in training and validating the models. [Share your training results in the repository issues](https://github.com/Yachay-AI/byt5-geotagging).
 
-For relevant data sets suggested by the Yachay team, please check the Existing Challenges section.
+<img src="https://github.com/1712n/yachay-marketing/assets/35688741/bc78d45d-4101-4110-974a-7b7b31e6aae9"  width="30" height="30"> **Regions dataset.** The goal of the Regions approach is to look into the dataset of top most populated regions around the world.
 
-### Confidence 
-For confidence estimation, see `inference.py`. 
-- Check the `Relevance` field, ranged from 0.0 to 1.0 
-- Higher relevance values correspond to a higher prediction confidence
-
-### Prediction 
-An example of using the trained model is in `inference.py`.
-
-## Existing Challenges and Suggested Data Sets
-### Regions Challenge 
-
-The first suggested methodology (Challenge 1) on training the model is to look into the dataset of top most populated regions around the world.
-
-The provided dataset is **[here](https://drive.google.com/file/d/1thkE-hgT3sDtZqILZH17Hyayy0hkk_jh/view?usp=share_link)**, which:
-
+ The provided dataset is [**here**](https://drive.google.com/file/d/1thkE-hgT3sDtZqILZH17Hyayy0hkk_jh/view?usp=share_link), which:
 - is an annotated corpus of 500k texts, as well as the respective geocoordinates
 - covers 123 regions
 - includes 5000 tweets per location
 
-### Seasons Сhallenge
-
-Challenge 2 sets the goal to identify the correlation between the time/date of post, the content, and the location. 
-
-Time zone differences, as well as seasonality of the events, should be analyzed and used to predict the location. For example: snow is more likely to appear in the Northern Hemisphere, especially if in December. Rock concerts are more likely to happen in the evening and in bigger cities, so the time of the post about a concert should be used to identify the time zone of the author and narrow down the list of potential locations.
-
+<img src="https://github.com/1712n/yachay-marketing/assets/35688741/bc78d45d-4101-4110-974a-7b7b31e6aae9"  width="30" height="30"> **Seasons dataset.** The goal of the Seasons approach is to identify the correlation between the time/date of post, the content, and the location. Time zone differences, as well as seasonality of the events, should be analyzed and used to predict the location. For example: snow is more likely to appear in the Northern Hemisphere, especially if in December. Rock concerts are more likely to happen in the evening and in bigger cities, so the time of the post about a concert should be used to identify the time zone of the author and narrow down the list of potential locations. 
 
 The provided dataset is **[here](https://drive.google.com/drive/folders/1P2QUGFBKaqdpZ4xAHmJMe2I57I94MJyO?usp=sharing)**, which:
 - is a .json of >600.000 texts 
@@ -73,18 +90,64 @@ The provided dataset is **[here](https://drive.google.com/drive/folders/1P2QUGFB
 - covers 15 different time zones 
 - focuses on 6 countries (Cuba, Iran, Russia, North Korea, Syria, Venezuela)
 
-## Resources
-### Contact 
+<img src="https://github.com/1712n/yachay-marketing/assets/35688741/bc78d45d-4101-4110-974a-7b7b31e6aae9"  width="30" height="30"> **Your custom data.** The geotagging model supports training and testing on custom datasets. Prepare your data in CSV format with the following columns: `text`, `lat`, and `lon`. 
 
-If you would like to contact us with any questions, concerns, or feedback, help@yachay.ai is our email.
+## Architecture 
+<details>
+<summary>Click to unfold ByT5 architecture diagram. </summary>
 
-You also can check out our site, [yachay.ai](https://www.yachay.ai/), or any of our socials below.
+```mermaid
+%%{init:{'theme':'neutral'}}%%
+flowchart TD
+subgraph "ByT5 classifier"
+  a("Input text") --> b("Input_ids")
+subgraph "byt5(T5EncoderModel)"
+  b("Input_ids")  --> c("byt5.encoder.inp_input_ids")
+subgraph "byt5.encoder(T5Stack)"
+  c("byt5.encoder.inp_input_ids")  --> d("byt5.encoder.embed_tokens") 
+subgraph "byt5.encoder.embed_tokens (Embedding)"
+  d("byt5.encoder.embed_tokens")  --> f("embedding")
+  e("byt5.encoder.embed_tokens.inp_weights") --> f("embedding") --> g("byt5.encoder.embed_tokens.out_0")
+end
+  g("byt5.encoder.embed_tokens.out_0") --> h("byt5.encoder.dropout(Dropout)") --> i("byt5.encoder.block.0(T5Block)") --> j("byt5.encoder.block.1(T5Block)") & k("byt5.encoder.block.2-9(T5Block)") & l("byt5.encoder.block.10(T5Block)")
+  j("byt5.encoder.block.1(T5Block)") --> k("byt5.encoder.block.2(T5Block)<br><br> ...<br><br>byt5.encoder.block.10(T5Block) ") --> l("byt5.encoder.block.11(T5Block)") --> m("byt5.encoder.final_layer_norm(T5LayerNorm)")
+  m("byt5.encoder.final_layer_norm(T5LayerNorm)")-->n("byt5.encoder.dropout(Dropout)")--> o("byt5.encoder.out_0")
+end
+o("byt5.encoder.out_0") --> p("byt5.out_0")
+end
+p("byt5.out_0")-->q("(Linear)")
+end
+q("(Linear)") -->r("logits")
+```
+</details>
 
+## Training
+#### Dependencies
+Ensure that the following dependencies are installed in your environment to build and train your geotagging model:
 
-<a href="https://discord.gg/msWFtcfmwe"><img src="https://cdn-icons-png.flaticon.com/512/3670/3670157.png" width=5% height=5%></img></a>     <a href="https://twitter.com/YachayAi"><img src="https://cdn-icons-png.flaticon.com/128/3670/3670151.png" width=5% height=5%></img></a>     <a href="https://www.reddit.com/user/yachay_ai"><img src="https://cdn-icons-png.flaticon.com/512/3670/3670226.png" width=5% height=5%></img></a>
+```
+transformers==4.29.1
+tqdm==4.63.2
+pandas==1.4.4
+pytorch==1.7.1
+```
 
-## Stargazers 
-[![Stargazers repo roster for @Yachay-AI/byt5-geotagging](https://reporoster.com/stars/Yachay-AI/byt5-geotagging)](https://github.com/Yachay-AI/byt5-geotagging/stargazers)
-## Forkers
+To train your geotagging model using the advanced ByT5 approach, execute the following script:
+
+```bash
+python train_model.py --train_input_file <training_file> --test_input_file <test_file> --do_train true --do_test true --load_clustering .
+```
+
+Refer to the `train_model.py` file for a comprehensive list of available parameters.
+
+## Confidence and Prediction 
+The geotagging model incorporates confidence estimation to assess the reliability of predicted coordinates. The Relevance field in the output indicates prediction confidence, ranging from `0.0` to `1.0.` Higher values indicate increased confidence.
+ For detailed information on confidence estimation and how to utilize the model for geotagging predictions, please refer to the `inference.py` file. This file provides an example script demonstrating the model architecture and integration of confidence estimation.
+
+## Welcome!
+### Forkers
 [![Forkers repo roster for @Yachay-AI/byt5-geotagging](https://reporoster.com/forks/Yachay-AI/byt5-geotagging)](https://github.com/Yachay-AI/byt5-geotagging/network/members)
 
+Feel free to explore the code, adapt it to your specific requirements, and integrate it into your projects. If you have any questions or require assistance, please don't hesitate to reach out. We highly appreciate your feedback and are dedicated to continuously enhancing the geotagging models.
+ 
+ <a href="https://discord.gg/msWFtcfmwe"><img src="https://cdn-icons-png.flaticon.com/512/3670/3670157.png" width=5% height=5%></img></a>     <a href="https://twitter.com/YachayAi"><img src="https://cdn-icons-png.flaticon.com/128/3670/3670151.png" width=5% height=5%></img></a>     <a href="https://www.reddit.com/user/yachay_ai"><img src="https://cdn-icons-png.flaticon.com/512/3670/3670226.png" width=5% height=5%></img></a>
