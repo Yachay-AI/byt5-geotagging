@@ -13,9 +13,9 @@
 <a href="https://github.com/Yachay-AI/byt5-geotagging/blob/master/LICENSE.md"><img src="https://badgen.net/github/license/Yachay-AI/byt5-geotagging"></img></a>
 </p> 
 
-# ByT5 Geotagging Model
+# Geotagging Model
 
-This repository is designed to support developers in building and training their own geotagging models. The ByT5 model architecture provided here allows for customization and training. Additionally, we suggest two curated datasets that are well-suited for training in different geolocation detection scenarios.
+This repository is designed to support developers in building and training their own geotagging models. The geotagging model architecture provided here allows for customization and training. Additionally, we suggest two curated datasets that are well-suited for training in different geolocation detection scenarios.
 
 ## Output Example
 
