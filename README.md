@@ -26,9 +26,7 @@ This repository is designed to support developers in building and training their
    "geotagging":{
       "lat":41.257160,
       "lon":-95.995102,
-      "confidence":0.9950085878372192,
-      "version":"3.0",
-      "source":"nominatim"
+      "confidence":0.9950085878372192
    }
 }
 ```
@@ -94,7 +92,7 @@ The provided dataset is **[here](https://drive.google.com/drive/folders/1P2QUGFB
 
 ## Architecture 
 <details>
-<summary>Click to unfold ByT5 architecture diagram. </summary>
+<summary>Click to unfold geotagging model architecture diagram. </summary>
 
 ```mermaid
 %%{init:{'theme':'neutral'}}%%
@@ -132,7 +130,7 @@ pandas==1.4.4
 pytorch==1.7.1
 ```
 
-To train your geotagging model using the advanced ByT5 approach, execute the following script:
+To train your geotagging model using the ByT5-encoder based approach, execute the following script:
 
 ```bash
 python train_model.py --train_input_file <training_file> --test_input_file <test_file> --do_train true --do_test true --load_clustering .
