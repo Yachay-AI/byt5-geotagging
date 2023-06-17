@@ -19,7 +19,7 @@ This repository is designed to support developers in building and training their
 
 ## Current Scores
 
-The current models reach 30km error on a Median Average Error on Haversine Distance for top 10% most relevant texts.
+The current models reach 30km Median Error on Haversine Distance for top 10% most relevant texts.
 
 ## Output Example
 
