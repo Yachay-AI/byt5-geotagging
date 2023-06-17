@@ -17,6 +17,10 @@
 
 This repository is designed to support developers in building and training their own geotagging models. The geotagging model architecture provided here allows for customization and training. Additionally, we suggest two curated datasets that are well-suited for training in different geolocation detection scenarios.
 
+## Current Scores
+
+The current models reach 30km error on a Median Average Error on Haversine Distance for top 10% most relevant texts.
+
 ## Output Example
 
 ```json
