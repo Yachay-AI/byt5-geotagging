@@ -1,4 +1,4 @@
-![Cover](https://github.com/Yachay-AI/byt5-geotagging/blob/main/yachay.png) 
+![Cover](./yachay.png) 
 
 <p align="center">
 <a href="https://twitter.com/YachayAi"><img src="https://img.shields.io/badge/Follow%20us-%40YachayAi-grey?style=plastic&logo=twitter"></img></a>
