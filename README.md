@@ -1,9 +1,11 @@
-[![Cover](https://user-images.githubusercontent.com/29067628/197814413-90cc6585-4580-48a8-88e4-ee2413198a09.png)](https://www.yachay.ai/) 
+![Cover](./yachay.png) 
 
 <p align="center">
-<a href="https://twitter.com/YachayAi"><img src="https://img.shields.io/badge/Follow%20us-%40YachayAi-blue?style=plastic&logo=twitter"></img></a>
-<a href="https://www.reddit.com/user/yachay_ai"><img src="https://img.shields.io/badge/Follow%20us-u%2Fyachay__ai-orange?style=plastic&logo=reddit"></img></a>
+<a href="https://twitter.com/YachayAi"><img src="https://img.shields.io/badge/Follow%20us-%40YachayAi-grey?style=plastic&logo=twitter"></img></a>
+<a href="https://www.reddit.com/user/yachay_ai"><img src="https://img.shields.io/badge/Follow%20us-u%2Fyachay__ai-grey?style=plastic&logo=reddit"></img></a>
+<a href="https://discord.gg/msWFtcfmwe"><img src="https://img.shields.io/badge/Follow%20us-Yachay%20AI-grey?style=plastic&logo=discord"></img></a>
 </p> 
+
 
 <p align="center">
 <a href="https://github.com/Yachay-AI/byt5-geotagging/stargazers"><img src="https://badgen.net/github/stars/Yachay-AI/byt5-geotagging"></img></a>
@@ -75,7 +77,8 @@ The current models reach 30km Median Error on Haversine Distance for top 10% mos
 ```
 
 ## Datasets
-Our team has curated two comprehensive datasets for two distinct training approaches. These datasets are intended for use in training and validating the models. [Share your training results in the repository issues](https://github.com/Yachay-AI/byt5-geotagging).
+Our team has curated two comprehensive datasets for two distinct training approaches. These datasets are intended for use in training and validating the models. [Share your training results in the repository issues](https://github.com/Yachay-AI/byt5-geotagging/issues). 
+
 
 <img src="https://github.com/1712n/yachay-marketing/assets/35688741/bc78d45d-4101-4110-974a-7b7b31e6aae9"  width="30" height="30"> **Regions dataset.** The goal of the Regions approach is to look into the dataset of top most populated regions around the world.
 
@@ -152,4 +155,4 @@ The geotagging model incorporates confidence estimation to assess the reliabilit
 
 Feel free to explore the code, adapt it to your specific requirements, and integrate it into your projects. If you have any questions or require assistance, please don't hesitate to reach out. We highly appreciate your feedback and are dedicated to continuously enhancing the geotagging models.
  
- <a href="https://discord.gg/msWFtcfmwe"><img src="https://cdn-icons-png.flaticon.com/512/3670/3670157.png" width=5% height=5%></img></a>     <a href="https://twitter.com/YachayAi"><img src="https://cdn-icons-png.flaticon.com/128/3670/3670151.png" width=5% height=5%></img></a>     <a href="https://www.reddit.com/user/yachay_ai"><img src="https://cdn-icons-png.flaticon.com/512/3670/3670226.png" width=5% height=5%></img></a>
+<p align="center"> <a href="https://discord.gg/msWFtcfmwe"><img src="https://cdn-icons-png.flaticon.com/512/3670/3670157.png" width=5% height=5%></img></a>     <a href="https://twitter.com/YachayAi"><img src="https://cdn-icons-png.flaticon.com/128/3670/3670151.png" width=5% height=5%></img></a>     <a href="https://www.reddit.com/user/yachay_ai"><img src="https://cdn-icons-png.flaticon.com/512/3670/3670226.png" width=5% height=5%></img></a></p>
