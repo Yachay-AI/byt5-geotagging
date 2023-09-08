@@ -80,14 +80,14 @@ The current models reach 30km Median Error on Haversine Distance for top 10% mos
 Our team has curated two comprehensive datasets for two distinct training approaches. These datasets are intended for use in training and validating the models. [Share your training results in the repository issues](https://github.com/Yachay-AI/byt5-geotagging/issues). 
 
 
-<img src="https://github.com/1712n/yachay-marketing/assets/35688741/bc78d45d-4101-4110-974a-7b7b31e6aae9"  width="30" height="30"> **Regions dataset.** The goal of the Regions approach is to look into the dataset of top most populated regions around the world.
+**Regions dataset.** The goal of the Regions approach is to look into the dataset of top most populated regions around the world.
 
  The provided dataset is [**here**](https://drive.google.com/file/d/1thkE-hgT3sDtZqILZH17Hyayy0hkk_jh/view?usp=share_link), which:
 - is an annotated corpus of 500k texts, as well as the respective geocoordinates
 - covers 123 regions
 - includes 5000 tweets per location
 
-<img src="https://github.com/1712n/yachay-marketing/assets/35688741/bc78d45d-4101-4110-974a-7b7b31e6aae9"  width="30" height="30"> **Seasons dataset.** The goal of the Seasons approach is to identify the correlation between the time/date of post, the content, and the location. Time zone differences, as well as seasonality of the events, should be analyzed and used to predict the location. For example: snow is more likely to appear in the Northern Hemisphere, especially if in December. Rock concerts are more likely to happen in the evening and in bigger cities, so the time of the post about a concert should be used to identify the time zone of the author and narrow down the list of potential locations. 
+**Seasons dataset.** The goal of the Seasons approach is to identify the correlation between the time/date of post, the content, and the location. Time zone differences, as well as seasonality of the events, should be analyzed and used to predict the location. For example: snow is more likely to appear in the Northern Hemisphere, especially if in December. Rock concerts are more likely to happen in the evening and in bigger cities, so the time of the post about a concert should be used to identify the time zone of the author and narrow down the list of potential locations. 
 
 The provided dataset is **[here](https://drive.google.com/drive/folders/1P2QUGFBKaqdpZ4xAHmJMe2I57I94MJyO?usp=sharing)**, which:
 - is a .json of >600.000 texts 
@@ -95,7 +95,7 @@ The provided dataset is **[here](https://drive.google.com/drive/folders/1P2QUGFB
 - covers 15 different time zones 
 - focuses on 6 countries (Cuba, Iran, Russia, North Korea, Syria, Venezuela)
 
-<img src="https://github.com/1712n/yachay-marketing/assets/35688741/bc78d45d-4101-4110-974a-7b7b31e6aae9"  width="30" height="30"> **Your custom data.** The geotagging model supports training and testing on custom datasets. Prepare your data in CSV format with the following columns: `text`, `lat`, and `lon`. 
+**Your custom data.** The geotagging model supports training and testing on custom datasets. Prepare your data in CSV format with the following columns: `text`, `lat`, and `lon`. 
 
 ## Architecture 
 <details>
