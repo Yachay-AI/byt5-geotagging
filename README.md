@@ -8,7 +8,7 @@
 <p align="center">
 <a href="https://github.blog/2023-07-13-release-radar-spring-23/#yachay-ai-1-0"><img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=103"></img></a>
 <a href="https://huggingface.co/yachay"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-datasets-FCE205"></a>
-<a href="www.python.org"><img src="https://img.shields.io/badge/Python-3776AB.svg?style=flat&logo=python&logoColor=white"></img></a>
+<a href="https://python.org"><img src="https://img.shields.io/badge/Python-3776AB.svg?style=flat&logo=python&logoColor=white"></img></a>
 <a href="https://pytorch.org"><img src="https://img.shields.io/badge/PyTorch-1.7.1-EE4C2C.svg?style=flat&logo=pytorch"></img></a>
 <a href="https://github.com/Yachay-AI/byt5-geotagging/releases"><img alt="Version" src="https://img.shields.io/github/v/release/Yachay-AI/byt5-geotagging?include_prereleases"></a>
 <a href="https://github.com/Yachay-AI/byt5-geotagging/blob/master/LICENSE.md"><img src="https://badgen.net/github/license/Yachay-AI/byt5-geotagging"></img></a>
