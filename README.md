@@ -1,19 +1,20 @@
+|Join our community | <a href="https://discord.gg/msWFtcfmwe"><img src="https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white"></img></a>|
+| :------------ | :-------------------------------------------------------------------------------------------------------- |
+
+
 ![Cover](./yachay.png) 
 
-<p align="center">
-<a href="https://twitter.com/YachayAi"><img src="https://img.shields.io/badge/Follow%20us-%40YachayAi-grey?style=plastic&logo=twitter"></img></a>
-<a href="https://www.reddit.com/user/yachay_ai"><img src="https://img.shields.io/badge/Follow%20us-u%2Fyachay__ai-grey?style=plastic&logo=reddit"></img></a>
-<a href="https://discord.gg/msWFtcfmwe"><img src="https://img.shields.io/badge/Follow%20us-Yachay%20AI-grey?style=plastic&logo=discord"></img></a>
-</p> 
-
 
 <p align="center">
-<a href="https://github.com/Yachay-AI/byt5-geotagging/stargazers"><img src="https://badgen.net/github/stars/Yachay-AI/byt5-geotagging"></img></a>
-<a href="https://github.com/Yachay-AI/byt5-geotagging/forks"><img src="https://badgen.net/github/forks/Yachay-AI/byt5-geotagging"></img></a>
-<a href="https://github.com/Yachay-AI/byt5-geotagging/contributors"><img src="https://badgen.net/github/contributors/Yachay-AI/byt5-geotagging"></img></a>
-<a href="https://github.com/Yachay-AI/byt5-geotagging/issues"><img src="https://badgen.net/github/issues/Yachay-AI/byt5-geotagging"></img></a>
+<a href="https://github.blog/2023-07-13-release-radar-spring-23/#yachay-ai-1-0"><img src="https://badges.frapsoft.com/os/v1/open-source.svg?v=103"></img></a>
+<a href="https://huggingface.co/yachay"><img src="https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-datasets-FCE205"></a>
+<a href="www.python.org"><img src="https://img.shields.io/badge/Python-3776AB.svg?style=flat&logo=python&logoColor=white"></img></a>
+<a href="https://pytorch.org"><img src="https://img.shields.io/badge/PyTorch-1.7.1-EE4C2C.svg?style=flat&logo=pytorch"></img></a>
+<a href="https://github.com/Yachay-AI/byt5-geotagging/releases"><img alt="Version" src="https://img.shields.io/github/v/release/Yachay-AI/byt5-geotagging?include_prereleases"></a>
 <a href="https://github.com/Yachay-AI/byt5-geotagging/blob/master/LICENSE.md"><img src="https://badgen.net/github/license/Yachay-AI/byt5-geotagging"></img></a>
 </p> 
+
+
 
 # Geotagging Model
 
@@ -79,17 +80,21 @@ The current models reach 30km Median Error on Haversine Distance for top 10% mos
 ## Datasets
 Our team has curated two comprehensive datasets for two distinct training approaches. These datasets are intended for use in training and validating the models. [Share your training results in the repository issues](https://github.com/Yachay-AI/byt5-geotagging/issues). 
 
+|Regions dataset| [![Google Drive](https://img.shields.io/badge/Google%20Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=white)](https://drive.google.com/file/d/1thkE-hgT3sDtZqILZH17Hyayy0hkk_jh/view?usp=share_link) |
+| :------------ | :-------------------------------------------------------------------------------------------------------- |
 
-**Regions dataset.** The goal of the Regions approach is to look into the dataset of top most populated regions around the world.
+The goal of the Regions approach is to look into the dataset of top most populated regions around the world.
 
- The provided dataset is [**here**](https://drive.google.com/file/d/1thkE-hgT3sDtZqILZH17Hyayy0hkk_jh/view?usp=share_link), which:
 - is an annotated corpus of 500k texts, as well as the respective geocoordinates
 - covers 123 regions
 - includes 5000 tweets per location
 
-**Seasons dataset.** The goal of the Seasons approach is to identify the correlation between the time/date of post, the content, and the location. Time zone differences, as well as seasonality of the events, should be analyzed and used to predict the location. For example: snow is more likely to appear in the Northern Hemisphere, especially if in December. Rock concerts are more likely to happen in the evening and in bigger cities, so the time of the post about a concert should be used to identify the time zone of the author and narrow down the list of potential locations. 
 
-The provided dataset is **[here](https://drive.google.com/drive/folders/1P2QUGFBKaqdpZ4xAHmJMe2I57I94MJyO?usp=sharing)**, which:
+|Seasons dataset| [![Google Drive](https://img.shields.io/badge/Google%20Drive-4285F4?style=for-the-badge&logo=googledrive&logoColor=white)](https://drive.google.com/drive/folders/1P2QUGFBKaqdpZ4xAHmJMe2I57I94MJyO?usp=sharing) |
+| :------------ | :-------------------------------------------------------------------------------------------------------- |
+
+The goal of the Seasons approach is to identify the correlation between the time/date of post, the content, and the location. Time zone differences, as well as seasonality of the events, should be analyzed and used to predict the location. For example: snow is more likely to appear in the Northern Hemisphere, especially if in December. Rock concerts are more likely to happen in the evening and in bigger cities, so the time of the post about a concert should be used to identify the time zone of the author and narrow down the list of potential locations. 
+
 - is a .json of >600.000 texts 
 - collected over the span of 12 months
 - covers 15 different time zones 
@@ -155,4 +160,11 @@ The geotagging model incorporates confidence estimation to assess the reliabilit
 
 Feel free to explore the code, adapt it to your specific requirements, and integrate it into your projects. If you have any questions or require assistance, please don't hesitate to reach out. We highly appreciate your feedback and are dedicated to continuously enhancing the geotagging models.
  
-<p align="center"> <a href="https://discord.gg/msWFtcfmwe"><img src="https://cdn-icons-png.flaticon.com/512/3670/3670157.png" width=5% height=5%></img></a>     <a href="https://twitter.com/YachayAi"><img src="https://cdn-icons-png.flaticon.com/128/3670/3670151.png" width=5% height=5%></img></a>     <a href="https://www.reddit.com/user/yachay_ai"><img src="https://cdn-icons-png.flaticon.com/512/3670/3670226.png" width=5% height=5%></img></a></p>
+<p align="center"> 
+<a href="https://www.reddit.com/user/yachay_ai/"><img src="https://img.shields.io/badge/Reddit-%23FF4500.svg?style=for-the-badge&logo=Reddit&logoColor=white"></img></a>  
+<a href="https://twitter.com/YachayAi"><img src="https://img.shields.io/badge/Twitter-%231DA1F2.svg?style=for-the-badge&logo=Twitter&logoColor=white"></img></a>  
+<a href="https://yachay.hashnode.dev/"><img src="https://img.shields.io/badge/Hashnode-2962FF?style=for-the-badge&logo=hashnode&logoColor=white"></img></a>  
+<a href="https://dev.to/yachayai"><img src="https://img.shields.io/badge/dev.to-0A0A0A?style=for-the-badge&logo=dev.to&logoColor=white"></img></a>  
+</p>
+
+
