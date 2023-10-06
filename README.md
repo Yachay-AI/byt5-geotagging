@@ -18,11 +18,14 @@
 
 # Geotagging Model
 
-This repository is designed to support developers in building and training their own geotagging models. The geotagging model architecture provided here allows for customization and training. Additionally, we suggest two curated datasets that are well-suited for training in different geolocation detection scenarios.
+This repository is designed to support developers in building and training their own geotagging models. The geotagging model architecture provided here allows for customization and training. Additionally, we publish datasets that are well-suited for training in different geolocation detection scenarios.
 
-## Current Scores
 
-The current models reach 30km Median Error on Haversine Distance for top 10% most relevant texts.
+The current models reach 30km Median Error on Haversine Distance for top 10% most relevant texts. [**Challenges are open**](https://github.com/Yachay-AI/byt5-geotagging/issues) to improve the model's performance.
+
+| Train your text-to-location model | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Yachay-AI/byt5-geotagging/blob/master/colab/byt5_training_demo.ipynb) |
+| :------------ | :-------------------------------------------------------------------------------------------------------- |
+
 
 ## Output Example
 
