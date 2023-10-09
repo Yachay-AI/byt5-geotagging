@@ -18,11 +18,60 @@
 
 # Geotagging Model
 
-This repository is designed to support developers in building and training their own geotagging models. The geotagging model architecture provided here allows for customization and training. Additionally, we suggest two curated datasets that are well-suited for training in different geolocation detection scenarios.
+This repository is designed to support developers in building and training their own geotagging models. The geotagging model architecture provided here allows for customization and training. Additionally, we publish datasets that are well-suited for training in different geolocation detection scenarios.
 
-## Current Scores
 
-The current models reach 30km Median Error on Haversine Distance for top 10% most relevant texts.
+The current models reach 30km Median Error on Haversine Distance for top 10% most relevant texts. Challanges in the repository issues are open to improve the model's performance.
+
+## Architecture and Training
+<details>
+<summary>Click to unfold geotagging model architecture diagram. </summary>
+
+```mermaid
+%%{init:{'theme':'neutral'}}%%
+flowchart TD
+subgraph "ByT5 classifier"
+  a("Input text") --> b("Input_ids")
+subgraph "byt5(T5EncoderModel)"
+  b("Input_ids")  --> c("byt5.encoder.inp_input_ids")
+subgraph "byt5.encoder(T5Stack)"
+  c("byt5.encoder.inp_input_ids")  --> d("byt5.encoder.embed_tokens") 
+subgraph "byt5.encoder.embed_tokens (Embedding)"
+  d("byt5.encoder.embed_tokens")  --> f("embedding")
+  e("byt5.encoder.embed_tokens.inp_weights") --> f("embedding") --> g("byt5.encoder.embed_tokens.out_0")
+end
+  g("byt5.encoder.embed_tokens.out_0") --> h("byt5.encoder.dropout(Dropout)") --> i("byt5.encoder.block.0(T5Block)") --> j("byt5.encoder.block.1(T5Block)") & k("byt5.encoder.block.2-9(T5Block)") & l("byt5.encoder.block.10(T5Block)")
+  j("byt5.encoder.block.1(T5Block)") --> k("byt5.encoder.block.2(T5Block)<br><br> ...<br><br>byt5.encoder.block.10(T5Block) ") --> l("byt5.encoder.block.11(T5Block)") --> m("byt5.encoder.final_layer_norm(T5LayerNorm)")
+  m("byt5.encoder.final_layer_norm(T5LayerNorm)")-->n("byt5.encoder.dropout(Dropout)")--> o("byt5.encoder.out_0")
+end
+o("byt5.encoder.out_0") --> p("byt5.out_0")
+end
+p("byt5.out_0")-->q("(Linear)")
+end
+q("(Linear)") -->r("logits")
+```
+</details>
+
+|  Train your text-to-location model | [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/Yachay-AI/byt5-geotagging/blob/master/colab/byt5_training_demo.ipynb)|
+| :------------ | :-------------------------------------------------------------------------------------------------------- |
+
+#### Dependencies
+Ensure that the following dependencies are installed in your environment to build and train your geotagging model:
+
+```
+transformers==4.29.1
+tqdm==4.63.2
+pandas==1.4.4
+pytorch==1.7.1
+```
+
+To train your geotagging model using the ByT5-encoder based approach, execute the following script:
+
+```bash
+python train_model.py --train_input_file <training_file> --test_input_file <test_file> --do_train true --do_test true --load_clustering .
+```
+
+Refer to the `train_model.py` file for a comprehensive list of available parameters.
 
 ## Output Example
 
@@ -102,53 +151,6 @@ The goal of the Seasons approach is to identify the correlation between the time
 
 **Your custom data.** The geotagging model supports training and testing on custom datasets. Prepare your data in CSV format with the following columns: `text`, `lat`, and `lon`. 
 
-## Architecture 
-<details>
-<summary>Click to unfold geotagging model architecture diagram. </summary>
-
-```mermaid
-%%{init:{'theme':'neutral'}}%%
-flowchart TD
-subgraph "ByT5 classifier"
-  a("Input text") --> b("Input_ids")
-subgraph "byt5(T5EncoderModel)"
-  b("Input_ids")  --> c("byt5.encoder.inp_input_ids")
-subgraph "byt5.encoder(T5Stack)"
-  c("byt5.encoder.inp_input_ids")  --> d("byt5.encoder.embed_tokens") 
-subgraph "byt5.encoder.embed_tokens (Embedding)"
-  d("byt5.encoder.embed_tokens")  --> f("embedding")
-  e("byt5.encoder.embed_tokens.inp_weights") --> f("embedding") --> g("byt5.encoder.embed_tokens.out_0")
-end
-  g("byt5.encoder.embed_tokens.out_0") --> h("byt5.encoder.dropout(Dropout)") --> i("byt5.encoder.block.0(T5Block)") --> j("byt5.encoder.block.1(T5Block)") & k("byt5.encoder.block.2-9(T5Block)") & l("byt5.encoder.block.10(T5Block)")
-  j("byt5.encoder.block.1(T5Block)") --> k("byt5.encoder.block.2(T5Block)<br><br> ...<br><br>byt5.encoder.block.10(T5Block) ") --> l("byt5.encoder.block.11(T5Block)") --> m("byt5.encoder.final_layer_norm(T5LayerNorm)")
-  m("byt5.encoder.final_layer_norm(T5LayerNorm)")-->n("byt5.encoder.dropout(Dropout)")--> o("byt5.encoder.out_0")
-end
-o("byt5.encoder.out_0") --> p("byt5.out_0")
-end
-p("byt5.out_0")-->q("(Linear)")
-end
-q("(Linear)") -->r("logits")
-```
-</details>
-
-## Training
-#### Dependencies
-Ensure that the following dependencies are installed in your environment to build and train your geotagging model:
-
-```
-transformers==4.29.1
-tqdm==4.63.2
-pandas==1.4.4
-pytorch==1.7.1
-```
-
-To train your geotagging model using the ByT5-encoder based approach, execute the following script:
-
-```bash
-python train_model.py --train_input_file <training_file> --test_input_file <test_file> --do_train true --do_test true --load_clustering .
-```
-
-Refer to the `train_model.py` file for a comprehensive list of available parameters.
 
 ## Confidence and Prediction 
 The geotagging model incorporates confidence estimation to assess the reliability of predicted coordinates. The Relevance field in the output indicates prediction confidence, ranging from `0.0` to `1.0.` Higher values indicate increased confidence.
