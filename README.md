@@ -21,7 +21,7 @@
 This repository is designed to support developers in building and training their own geotagging models. The geotagging model architecture provided here allows for customization and training. Additionally, we publish datasets that are well-suited for training in different geolocation detection scenarios.
 
 
-The current models reach 30km Median Error on Haversine Distance for top 10% most relevant texts. Challanges in the repository issues are open to improve the model's performance.
+The current models reach 30km Median Error on Haversine Distance for top 10% most relevant texts. Challenges in the repository issues are open to improve the model's performance.
 
 ## Architecture and Training
 <details>
