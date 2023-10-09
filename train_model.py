@@ -16,7 +16,7 @@ from torch.utils.data import DataLoader, WeightedRandomSampler
 from tqdm import tqdm
 
 import wandb
-from model import ByT5ClusteredClassifierDataset, ByT5_classifier, DistanceBasedLoss, calculate_smooth_labels
+from model import ByT5ClusteredClassifierDataset, ByT5_classifier
 from utils import read_csv_data, \
     read_train_test_data, \
     true_distance_from_pred, true_distance_from_pred_cluster
