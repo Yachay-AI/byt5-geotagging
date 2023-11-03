@@ -158,7 +158,7 @@ The geotagging model incorporates confidence estimation to assess the reliabilit
 
 ## Welcome!
 ### Forkers
-[![Forkers repo roster for @Yachay-AI/byt5-geotagging](https://reporoster.com/forks/Yachay-AI/byt5-geotagging)](https://github.com/Yachay-AI/byt5-geotagging/network/members)
+[![Forkers repo roster for @Yachay-AI/byt5-geotagging](https://bytecrank.com/nastyox/reporoster/php/forkersSVG.php?user=Yachay-AI&repo=byt5-geotagging)](https://github.com/Yachay-AI/byt5-geotagging/network/members)
 
 Feel free to explore the code, adapt it to your specific requirements, and integrate it into your projects. If you have any questions or require assistance, please don't hesitate to reach out. We highly appreciate your feedback and are dedicated to continuously enhancing the geotagging models.
  
