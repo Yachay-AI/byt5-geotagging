@@ -81,11 +81,11 @@ def read_csv_data(filename, nrows=None, skiprows=None):
     return data
 
 
-def read_train_test_data(filename, nrows=None, ntest=None):
+def read_train_test_data(filename, nrows=None):
     data = read_csv_data(filename, nrows)
     # data['text'] = data['tweet_text']
     random.seed(1)
-    df_train, df_test = sklearn.model_selection.train_test_split(data, test_size=ntest if ntest is not None else 0.1)
+    df_train, df_test = sklearn.model_selection.train_test_split(data, test_size=0.1)
     return df_train, df_test
 
 
@@ -180,7 +180,6 @@ def get_distances(n_clusters_, cluster_df):
 
 
 def train_scaler_and_vocab(df):
-    print("train_scaler_and_vocab", len(df))
     scaler = StandardScaler()
     scaler.fit_transform(df[['lat', 'lng']].values)
     joblib.dump(scaler, "models/scaler.save")
@@ -190,7 +189,6 @@ def train_scaler_and_vocab(df):
             vocabulary[c] += 1
     with open('models/vocabulary', 'wb') as fout:
         pickle.dump(vocabulary, fout)
-    print("finish train_scaler_and_vocab")
     return read_scaler_and_vocab()
 
 
@@ -230,6 +228,13 @@ def true_distance_from_pred(cluster_pred_logits, lat_true, lng_true, cluster_df)
             (lat_true[i], lng_true[i])).km)
     return torch.tensor(s)
 
+def true_distance_from_coords(lat_pred, lng_pred, lat_true, lng_true):
+    s = []
+    for i in range(len(lat_true)):
+        s.append(geopy.distance.great_circle(
+            (lat_pred[i]*90, lng_pred[i]*180),
+            (lat_true[i], lng_true[i])).km)
+    return torch.tensor(s)
 
 def prepare_subclusters(cluster_df, merges, cluster_id):
     cluster_merges = merges[cluster_df.iloc[cluster_id]['coordinates']]
