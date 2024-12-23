@@ -31,4 +31,4 @@ If you would like to contact us with any questions, concerns, or feedback, help@
 You also can check out our site, [yachay.ai](https://www.yachay.ai/), or any of our socials below.
 
 <a href="https://discord.gg/msWFtcfmwe"><img src="https://cdn-icons-png.flaticon.com/512/3670/3670157.png" width=5% height=5%></img></a>     <a href="https://twitter.com/YachayAi"><img src="https://cdn-icons-png.flaticon.com/128/3670/3670151.png" width=5% height=5%></img></a>     <a href="https://www.reddit.com/user/yachay_ai"><img src="https://cdn-icons-png.flaticon.com/512/3670/3670226.png" width=5% height=5%></img></a>
-
+<a href="https://www.linkedin.com/in/alinapark/"><img src="https://cdn-icons-png.flaticon.com/512/3536/3536505.png" width=5% height=5%></img></a>
