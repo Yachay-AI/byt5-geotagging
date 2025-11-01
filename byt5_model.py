@@ -56,6 +56,9 @@ class ByT5ClusteredClassifierDataset(Dataset):
         self.merges = merges
         self.tokenizer = AutoTokenizer.from_pretrained(tokenizer_name)
         self.language_list = language_df['lang'].values.tolist() if language_df is not None else None
+        if self.language_list is not None:
+            self.lang_map = {lang: idx for idx, lang in enumerate(self.language_list)}
+
 
     def __len__(self):
         return self.length
@@ -72,10 +75,9 @@ class ByT5ClusteredClassifierDataset(Dataset):
 
         language_id = 0
         if self.language_list is not None:
-            try:
-                language_id = self.language_list.index(self.dataframe['lang'].iloc[index])
-            except:
-                language_id = len(self.language_list) - 1
+            # O(1) lookup using dictionary
+            language_id = self.lang_map.get(self.dataframe['lang'].iloc[index],len(self.language_list) - 1)
+
 
         return data, label, raw_text, self.dataframe.iloc[index]['lat'], \
             self.dataframe.iloc[index]['lon'], language_id
